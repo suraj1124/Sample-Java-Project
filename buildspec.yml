@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Build step (optional for plain JS projects)
+      # - npm run build   # Uncomment if you have a build script
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - '**/*'
+    - '!node_modules/**/*'   # Exclude node_modules if you want a smaller artifact
