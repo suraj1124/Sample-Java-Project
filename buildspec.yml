@@ -9,7 +9,7 @@ phases:
       - npm install
   build:
     commands:
-      - echo Build step (optional for plain JS projects)
+      - echo Build step 
       
   post_build:
     commands:
