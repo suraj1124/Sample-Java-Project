@@ -3,13 +3,13 @@
   files:
     - source: .
       destination: /home/ec2-user/sample-java-project/
-  commands:
-    - echo "set_permissions"
-    - cd /home/ec2-user/sample-java-project/scripts
-    - sudo chmod +x start_server.sh
-    - sudo chmod +x install_dependencies.sh
-    
+   
   hooks:
+    BeforeInstall:
+      - commands:
+         - cd /home/ec2-user/sample-java-project/scripts
+         - sudo chmod +x start_server.sh
+         - sudo chmod +x install_dependencies.sh
     AfterInstall:
       - location: scripts/install_dependencies.sh
         timeout: 300
