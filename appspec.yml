@@ -2,7 +2,7 @@
   os: linux
   files:
     - source: .
-      destination: /home/ec2-user/sample-java-project
+      destination: /home/ec2-user/sample-java-project/
   commands:
     - echo "set_permissions"
     - cd /home/ec2-user/sample-java-project/scripts
